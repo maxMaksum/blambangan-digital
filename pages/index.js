@@ -50,7 +50,7 @@ export default function Home({ myPictures,myCategories}) {
            
         <div className="mt-2 text-center">
              {mx.map(j=>(
-              <div className="space-y-6 mb-10">
+              <div className="space-y-6 mb-10" key={j.id}>
                 <h2 className="font-bold font-lg text-xl lg:text-4xl">{j.catTitle}</h2>
                 <p className="italic">{j.description}</p>
                
