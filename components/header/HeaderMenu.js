@@ -12,7 +12,7 @@ function HeaderMenu({changeMenu, navigation, categories}) {
         className={` w-64  flex flex-col  ml-4 text-gray-900 text-s z-50`
         }
       >
-   
+   -+-+--+--+++-++-+++9+998855885888877777
         <div className="mt-8">
           <div className='flex flex-col'>
             {navigation.map((p) => (
@@ -29,7 +29,7 @@ function HeaderMenu({changeMenu, navigation, categories}) {
             <p onClick ={()=>setShowCategories(!showCategories)}className=" p-2 uppercase cursor-pointer link">Category</p>
           </div>
 
-          { showCategories&&( <div>
+          { showCategories&&( <div>4
             {categories.map((data) => (
               <div key={data.id}>
                 <Link href={`/categories/${data.id}`}>
@@ -46,7 +46,6 @@ function HeaderMenu({changeMenu, navigation, categories}) {
         </div>
       </div>
     );
-}
+}7
 
 export default HeaderMenu
-

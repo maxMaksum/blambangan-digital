@@ -13,9 +13,11 @@ function Layout({ children, navigation, category }) {
   const [smallMenu, setSmallMenu] = useState(false);
 
   return (
-    <div className="max-w-6xl mx-auto relative flex flex-col min-h-screen">
+    <div className="max-w-6xl mx-auto relative flex flex-col">
       <UserContext.Provider value={{ smallMenu, setSmallMenu }}>
-        {router.route == "/products/[product]" ? null : <Header />}
+        {/* {router.route == "/products/[product]" ? null : <Header />} */}
+        <Header />
+        
         {/* {router.route == "/products/[product]" ? null : <Header />} */}
         <div className="relative min-h-screen">
           {children}

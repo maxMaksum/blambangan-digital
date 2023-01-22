@@ -15,16 +15,17 @@ function ContactForm() {
     await new Promise((resolve)=>setTimeout(() => {
       setShowThankyou(false)
         resolve();
-    }, 2000)); 
+    }, 5000)); 
     router.push('/')
-    console.log(1);
-    console.log(2);
+  
 }
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Sending");
+    setSubmitted(true)
+    setShowThankyou(false)
     let data = {
       name,
       email,
@@ -40,7 +41,7 @@ function ContactForm() {
     }).then((res) => {
       if (res.status === 200) {
         console.log("Response succeeded!");
-        setSubmitted(true);
+        setSubmitted(false);
         setName("");
         setEmail("");
         setMessage("");
@@ -51,17 +52,22 @@ function ContactForm() {
   };
 
   return (
-    <div className="relative mt-20 ">
+    <div className="relative mt-24 ">
       {showThankyou&&<div className=" absolute top-0 p-2 w-full">
           <div className="bg-green-500 text-2xl rounded shadow-lg flex items-center justify-center p-10 z-50">
           <p>Thank You For Contacting Us</p>
           </div>
           
         </div>}
-        
+      {submitted&&<div className=" absolute top-20 p-2 w-full">
+          <div className="bg-green-500 text-2xl rounded shadow-lg flex items-center justify-center p-10 z-50">
+          <p>Sending.....</p>
+          </div>
+          
+        </div>}
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center flex-col mx-auto p-2">
-          <h1 className="text-4xl font-bold tracking-wide">Contact Us</h1>
+          <h1 className="text-4xl font-bold italic tracking-wide text-green-500">Contact Us</h1>
         
           <p className="pt-2 text-cyan-100 text-s ">
             You could leave us message by filling the contact form below or you
@@ -126,8 +132,13 @@ function ContactForm() {
                 <button
                   onClick={(e) => {
                     handleSubmit(e);
-                  }}
-                  className="inline-block self-center bg-green-900 font-bold rounded-lg px-6 py-2 uppercase text-gray-50"
+                  }
+                
+                }
+
+              
+                  className={submitted?"inline-block self-center bg-red-900 font-bold rounded-lg px-6 py-2 uppercase text-gray-50":"inline-block self-center bg-green-900 font-bold rounded-lg px-6 py-2 uppercase text-gray-50"}
+                  disabled={submitted}
                 >
                   {" "}
                   Send Message
@@ -139,7 +150,12 @@ function ContactForm() {
         <div className="flex flex-grow justify-center items-center bg-green-900 h-96 w-100 mt-10 sm:mt-0 w-100">
           <iframe
             className="h-full w-full mx-auto "
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.4860132214076!2d114.31202431425989!3d-8.35375588648219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd157a05daf0995%3A0xf4c5d94aaabb48e2!2sUD.%20Sandang%20Makmur!5e0!3m2!1sen!2sid!4v1639985734197!5m2!1sen!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.485265575083!2d114.31196651416086!3d-8.353829786482896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd157606e0d182d%3A0x1d8352f13f9de153!2sBALIJAVA%20SPIRIT%20GARMENT%20AND%20MANUFACTURE!5e0!3m2!1sen!2sid!4v1674358706015!5m2!1sen!2sid" 
+            
+            // width="600" height="450" style="border:0;" allowfullscreen="" 
+            
+            
+            // loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
             //   width="600"
             //   height="450"
             style={{ border: 0 }}

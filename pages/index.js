@@ -42,7 +42,7 @@ export default function Home({ myPictures,myCategories}) {
 
       <main onClick= {() => setSmallMenu(false)} className={styles.main }>
 
-      <div className="h-screen sm:h-96 bg-blue-50 relative m-4 z-10 w-screen">
+      <div className="h-screen sm:h-96 bg-green-50 relative m-4 z-10 w-screen">
               <Herro/>
       </div>
        
@@ -50,8 +50,8 @@ export default function Home({ myPictures,myCategories}) {
            
         <div className="mt-2 text-center">
              {mx.map(j=>(
-              <div className="space-y-6">
-                <h2 className="font-bold font-lg text-xxl lg:text-6xl">{j.catTitle}</h2>
+              <div className="space-y-6 mb-10">
+                <h2 className="font-bold font-lg text-xl lg:text-4xl">{j.catTitle}</h2>
                 <p className="italic">{j.description}</p>
                
                 <div>
@@ -79,9 +79,10 @@ export default function Home({ myPictures,myCategories}) {
           rel="noopener noreferrer"
         >
           Powered by{" "}
-          <span className={styles.logo}>
+          <span className="font-bold text-2xl text-green-900 mx-2">BALIJAVA DIGITAL</span>
+          {/* <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          </span> */}
         </a>
       </footer>
     </div>

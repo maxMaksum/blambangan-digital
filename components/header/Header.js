@@ -14,39 +14,10 @@ import { UserContext } from '../card/Layout';
 
 function Header() {
   const {smallMenu, setSmallMenu} = useContext(UserContext)
-
-  // const newurl = `http://localhost:4000/headers`;
   const [displayMenu, setDisplayMenu] = useState(false);
-  // const newHeader = () => {
-
-  //   const myFetcher = async(query)=> await graphQLClient.request(query);
-  //   const { data, error } = useSWR(headerQuery, myFetcher)
-  //   if(data) return data.headers
-  //   if(error)return error
-  // };
-
+  
   const myHeader = GraphCmsFether(headerQuery)?.headers;
   const myCategories = GraphCmsFether(categoriesQuery)?.newCategories;
-  // console.log(myCategories)
-  // const { header, error } = useSWR("123", newFetcher(headerQuery));
-
-  // const fetcher = async () => await fetch(newurl).then((res) => res.json());
-
-  // const { data, error } = useSWR("address", fetcher);
-
-  // if (error) console.log(error);
-  // if (data)
-  //   console.log(
-  //     "yay",
-  //     data.map((d) => d.id)
-  //   );
-
-  // const [ndata] = useFetch("http://localhost:4000/headers");
-  // const [social] = useFetch("http://localhost:4000/SocialMedia");
-  // const [response] = useFetch("http://localhost:4000/products");
-
-  // const categoriesA = response?.map((category) => category.category);
-  // const categories = [...new Set(categoriesA)];
 
   const router = useRouter();
 
@@ -91,15 +62,15 @@ function Header() {
           </div>
           <div className="flex items-center justify-start">
               {HeaderSocial?.map((s) => (
-                <div key={s.id} className="p-2">
+                <div key={s.id} className="h-20 mx-2 flex items-center justify-center">
                   <Link href={s.link}>
                     <a target="_blank">
-                      <Image
+                      <img
                         src={`/images01/${s.image}`}
                         alt={s.title}
                         height={20}
                         width={20}
-                        className="object-contain cursor-pointer"
+                        className="object-cover cursor-pointer"
                       />
                     </a>
                   </Link>
