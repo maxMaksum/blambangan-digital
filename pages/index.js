@@ -42,11 +42,11 @@ export default function Home({ myPictures,myCategories}) {
 
       <main onClick= {() => setSmallMenu(false)} className={styles.main }>
 
-      <div className="h-screen sm:h-96 bg-green-50 relative m-4 z-10 w-screen">
+      <div className="h-96 bg-green-50 relative m-4 z-10 w-screen">
               <Herro/>
       </div>
        
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-48 sm:mt-2">
            
         <div className="mt-2 text-center">
              {mx.map(j=>(

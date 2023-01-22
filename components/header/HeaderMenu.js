@@ -12,8 +12,7 @@ function HeaderMenu({changeMenu, navigation, categories}) {
         className={` w-64  flex flex-col  ml-4 text-gray-900 text-s z-50`
         }
       >
-   -+-+--+--+++-++-+++9+998855885888877777
-        <div className="mt-8">
+           <div className="mt-8">
           <div className='flex flex-col'>
             {navigation.map((p) => (
               <div key={p.id}>
