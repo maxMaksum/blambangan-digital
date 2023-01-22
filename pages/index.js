@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import React, { useContext } from "react";
 import styles from "../styles/Home.module.css";
 
@@ -8,7 +7,6 @@ import { graphCmsRequest} from "../lib/services";
 import { UserContext } from "../components/card/Layout";
 import Herro from "../components/card/Herro";
 import {picturesQuery, categoriesQuery } from "../lib/graphql";
-import Galery from "../components/card/Images";
 import PostDetails from "../components/card/ImagesHome";
 
 
@@ -42,16 +40,16 @@ export default function Home({ myPictures,myCategories}) {
 
       <main onClick= {() => setSmallMenu(false)} className={styles.main }>
 
-      <div className="h-96 bg-green-50 relative m-4 z-10 w-screen">
+      <div className="relative z-10 w-screen">
               <Herro/>
       </div>
        
-        <div className="flex flex-col items-center justify-center mt-48 sm:mt-2">
+        <div className="flex flex-col items-center justify-center sm:mt-2">
            
         <div className="mt-2 text-center">
              {mx.map(j=>(
               <div className="space-y-6 mb-10" key={j.id}>
-                <h2 className="font-bold font-lg text-xl lg:text-4xl">{j.catTitle}</h2>
+                <h2 className="font-bold font-lg text-xl lg:text-2xl italic text-green-900">{j.catTitle}</h2>
                 <p className="italic">{j.description}</p>
                
                 <div>

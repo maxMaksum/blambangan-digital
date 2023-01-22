@@ -13,7 +13,7 @@ function PostDetails({ myGalery}) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 place-items-center mx-auto">
           {myGalery?.map((p) => (
             <div key={p.id}
-              className=" h-96 w-full  rounded-xl shadow-lg relative bg-blue-100"
+              className=" h-96 w-full  rounded-xl shadow-lg relative bg-blue-50"
             >
               <Link href={`/products/${p.id}`}>
                 <a>
@@ -27,7 +27,7 @@ function PostDetails({ myGalery}) {
                 </div>
 
                 <div className="h-32">
-                  <h2>{p.title}</h2>
+                  <h2 className="text-lg font-bold italic text-green-900">{p.title}</h2>
                   <p className="line-clamp-2 p-2">{p.description}</p>
                 </div>
              </div>

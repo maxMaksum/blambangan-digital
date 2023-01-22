@@ -53,7 +53,7 @@ function MyBanner({ banner }) {
   };
 
   return (
-    <div className="bg-gray-100 shadow-lg mt-4 max-w-4xl mx-auto">
+    <div className="bg-gray-50 shadow-lg mt-4 max-w-6xl mx-auto">
       <Slider {...settings} className="z-10 relative">
         {banner.map((b) => (
           <div key={b.id}>

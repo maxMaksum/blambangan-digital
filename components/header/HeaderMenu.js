@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import Link from 'next/link'
 import { UserContext } from '../card/Layout';
+
 function HeaderMenu({changeMenu, navigation, categories}) {
   
  
@@ -28,19 +29,6 @@ function HeaderMenu({changeMenu, navigation, categories}) {
             <p onClick ={()=>setShowCategories(!showCategories)}className=" p-2 uppercase cursor-pointer link">Category</p>
           </div>
 
-          { showCategories&&( <div>4
-            {categories.map((data) => (
-              <div key={data.id}>
-                <Link href={`/categories/${data.id}`}>
-                  <a>
-                  <p className=" p-2 ml-4 uppercase link cursor-pointer bg-gray-200">{data.title}</p>
-                  </a>
-                </Link>
-              </div>
-            ))}
-          </div>)
-           
-          }
           
         </div>
       </div>

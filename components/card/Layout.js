@@ -15,8 +15,8 @@ function Layout({ children, navigation, category }) {
   return (
     <div className="max-w-6xl mx-auto relative flex flex-col">
       <UserContext.Provider value={{ smallMenu, setSmallMenu }}>
-        {/* {router.route == "/products/[product]" ? null : <Header />} */}
-        <Header />
+        {router.route == "/products/[product]" ? null : <Header />}
+        {/* <Header /> */}
         
         {/* {router.route == "/products/[product]" ? null : <Header />} */}
         <div className="relative min-h-screen">
