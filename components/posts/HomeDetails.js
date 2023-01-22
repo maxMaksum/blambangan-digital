@@ -31,7 +31,7 @@ function HomeDetails({ post }) {
                 
                </div>
             </div>
-            <div className=" w-1/2 h-full flex flex-col justify-center items-start space-y-4  px-8">
+            <div className=" w-full md:w-1/2 h-full flex flex-col justify-center items-start space-y-4  px-0">
            
                 
                 <h1 className="uppercase  text-lg my-2 font-bold text-center">{post.title}</h1> 
