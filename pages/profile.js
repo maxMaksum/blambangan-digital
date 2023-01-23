@@ -7,6 +7,7 @@ import { UserContext } from "../components/card/Layout";
 
 function MyProfile({ myProfile, myBanner }) {
   const { smallMenu, setSmallMenu } = useContext(UserContext);
+  console.log(myProfile)
 
   return (
     <div className="mt-20" onClick= {() => setSmallMenu(false)} >

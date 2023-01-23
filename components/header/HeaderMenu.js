@@ -2,12 +2,8 @@ import { useState, useContext } from 'react';
 import Link from 'next/link'
 import { UserContext } from '../card/Layout';
 
-function HeaderMenu({changeMenu, navigation, categories}) {
+function HeaderMenu({changeMenu, navigation}) {
   
- 
-
-  const [showCategories, setShowCategories]=useState(false)
-
     return (
       <div
         className={` w-64  flex flex-col  ml-4 text-gray-900 text-s z-50`
@@ -26,10 +22,8 @@ function HeaderMenu({changeMenu, navigation, categories}) {
                 </Link>
               </div>
             ))}
-            <p onClick ={()=>setShowCategories(!showCategories)}className=" p-2 uppercase cursor-pointer link">Category</p>
+           
           </div>
-
-          
         </div>
       </div>
     );
