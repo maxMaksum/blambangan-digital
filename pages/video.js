@@ -8,7 +8,6 @@ function NewVideo({ posts, results }) {
   const [showVideo, setShowVideo] = useState(true);
   const [data, setData] = useState();
 
- console.log(results)
 
   const watchVideo = (p) => {
     setShowVideo(!showVideo);

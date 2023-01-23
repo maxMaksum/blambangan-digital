@@ -27,8 +27,7 @@ export default function Home({ myPictures,myCategories}) {
     return obj
   
   })
-
- console.log(mx)
+ 
 
   return (
     <div className={""}>

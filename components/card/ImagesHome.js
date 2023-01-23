@@ -7,7 +7,7 @@ function PostDetails({ myGalery}) {
   const [showImage, setShowImage] = useState(false);
   const [imageCover, setImageCover] = useState({ id: "ckvdhcmeg4sh30b88mezh0vd1", url: "/background.png", width: 740, height: 1600 });
 
-  console.log(myGalery)
+ 
   return (
     <div className="bg-white shadow-lg rounded-lg">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 place-items-center mx-auto">

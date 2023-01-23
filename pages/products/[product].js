@@ -7,9 +7,6 @@ import HomeDetails from "../../components/posts/HomeDetails";
 function product({  myServicesDetails}) {
  
   const newProducts=myServicesDetails.album123
-  
- 
-  console.log(newProducts)
   return <div><HomeDetails post={newProducts}/></div>;
 }
 

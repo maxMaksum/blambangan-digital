@@ -9,7 +9,7 @@ import {
 
 function HomeDetails({ post }) {
   const router = useRouter()
-  console.log(post)
+ 
   return (
     <div className="bg-gray-100 container mx-auto  mt-20 max-w-6xl p-6 shadow-xl rounded-2xl w-full bg-green-100  ">
         <button onClick={()=>router.push("/")}>
